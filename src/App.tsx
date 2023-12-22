@@ -30,7 +30,7 @@ function App() {
         height: "100vh",
       }}
     >
-      <div className="w-50">
+      <div className="w-50 h-75">
         <div className="d-flex justify-content-between p-2">
           <div className="">Code:</div>
 
@@ -46,10 +46,11 @@ function App() {
             Run
           </button>
         </div>
-        <div className="d-flex position-relative m-2">
-          <div className="d-flex align-items-center w-100">
+        <div className="d-flex position-relative m-2 h-100">
+          <div className="d-flex align-items-center w-100 h-50">
             <SyntaxHighlighter
               customStyle={{
+                overflow: "auto",
                 width: "100%",
                 top: 10,
                 position: "absolute",
@@ -69,12 +70,12 @@ function App() {
                 top: 15,
                 left: 5,
                 color: "transparent",
-                height: "100vh",
+                height: "100%",
                 width: "100%",
                 border: "none",
               }}
               onChange={handleInputChange}
-            ></textarea>
+            />
           </div>
         </div>
       </div>
@@ -95,7 +96,13 @@ function App() {
             Run your code and see if there is any errors!
           </p>
         )}
-        <button className="btn btn-secondary float-end" hidden={!errorInfo}>
+        <button
+          className="btn btn-secondary float-end"
+          hidden={!errorInfo}
+          onClick={() => {
+            setErrorInfo(null);
+          }}
+        >
           Clear
         </button>
       </div>
