@@ -1,0 +1,14 @@
+body {
+    overflow: hidden;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    font-family: SFMono-Regular, Menlo, Monaco, "Consolas", "Liberation Mono", "Courier New", monospace;
+    line-height: 21px;
+    font-size: 14px;
+    white-space-collapse: preserve;
+    word-break: normal;
+    color: rgba(255, 255, 255, 0.39);
+}
